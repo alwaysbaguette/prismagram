@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 import path from 'path';
 dotenv.config({path:path.resolve(__dirname,".env")});
 
+import jwt from 'jsonwebtoken';
+
 /**
  * @author alwaysbaguette
  * @description 랜점숫자를 만들어준다.
@@ -11,7 +13,6 @@ dotenv.config({path:path.resolve(__dirname,".env")});
  * @param {*} range 
  */
 const generateRandomNo = (list,range) =>{
-    console.log(list.length);
     let randomNo = 0;
     let rangeValue = range || 10;
     if(list) {
@@ -41,12 +42,15 @@ const sendSecretMail = (adress, secret) => {
         from : "alwaysbaguette@gmail.com",
         to : adress,
         subject : "🔓Login Secret for Prismagram🔓",
-        html : `Hello! Your login secret it <strong>${secret}</strong>.<br/>Copy paste on the app/website to log in`
+        html : `Hello! Your login secret is <strong>${secret}</strong>.<br/>Copy paste on the app/website to log in`
     }
     return sendMail(email);
 }
 
+const generateToken = id =>jwt.sign({id},process.env.JWT_SECRET);
+
 export default {
     generateRandomNo,
-    sendSecretMail
+    sendSecretMail,
+    generateToken
 }

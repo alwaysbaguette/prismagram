@@ -3,11 +3,9 @@ import path from 'path';
 import {GraphQLServer} from "graphql-yoga";
 import logger from 'morgan';
 import schema from './schema';
-import utils from './utils';
-dotenv.config({path:path.resolve(__dirname,".env")});
+// import './passport';
 
-const sendMail = utils.sendSecretMail;
-sendMail('alwaysbaguette@gmail.com','lalalalala');
+dotenv.config({path:path.resolve(__dirname,".env")});
 
 const PORT = process.env.PORT || 4000;
 

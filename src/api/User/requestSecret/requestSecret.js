@@ -10,6 +10,7 @@ export default {
             const adjectives = words.adjectives;
             const loginSecret = nouns[utils.generateRandomNo(nouns)] + adjectives[utils.generateRandomNo(adjectives)];
             try{
+                await utils.sendSecretMail(email,loginSecret);
                 await prisma.updateUser({data:{loginSecret},where:{email}});
                 return true;
             }catch(err){
