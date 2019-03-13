@@ -3,9 +3,9 @@ Prismagram with express with Express + Prisma + React and React Native
 
 ##  User Stories
 
-- [x] Create account
+- [X] Create account
 - [X] Request Secret
-- [] Confirm Secret (Login)
+- [X] Confirm Secret (Login)
 - [] Like / Unlike a photo
 - [] Comment on a photo
 - [] Search by user
