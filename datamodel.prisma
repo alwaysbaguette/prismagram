@@ -33,7 +33,8 @@ type Like {
 type Comment {
   id: ID! @unique
   text: String!
-  user: Post!
+  user: User!
+  post: Post!
 }
 
 type File {
