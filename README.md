@@ -9,12 +9,12 @@ Prismagram with express with Express + Prisma + React and React Native
 - [X] Like / Unlike a photo
 - [X] Comment on a photo
 - [X] Search by user
-- [] Search by location
+- [X] Search by location
+- [X] Follow User
+- [X] Unfollow User
 - [] See user profile
-- [] Follow / Unfollow User
 - [] See the full photo
 - [] Edit my profile
-- [] Log in
 - [] Upload a photo
 - [] Edit the photo (Delete)
 - [] See the feed
