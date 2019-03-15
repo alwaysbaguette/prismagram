@@ -1,5 +1,6 @@
 import middlewares from "../../../../middlewares";
 import { prisma } from "../../../../generated/prisma-client";
+import { LegacyRelationalReservedFields } from "prisma-datamodel";
 
 export default {
     Query : {
@@ -13,7 +14,12 @@ export default {
                 user: userResponse,
                 posts
             }
-
+        }
+    },
+    User : {
+        fullName:parent =>{
+            const {firstName , lastName } = parent;
+            return `${firstName} ${lastName}`;
         }
     }
 }

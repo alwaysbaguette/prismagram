@@ -3,7 +3,8 @@ type User {
   userName: String! 
   email: String! 
   firstName: String 
-  lastName: String!
+  lastName: String
+  fullName: String
   bio: String!
   posts:[Post!]!
   likes: [Like!]!
@@ -22,6 +23,7 @@ type Post {
   files:[File!]!
   likes : [Like!]!
   comments: [Comment!]!
+  isLiked: Boolean
 }
 
 type Like {
