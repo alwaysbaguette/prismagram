@@ -12,7 +12,17 @@ const USER_FRAGMENT = `
         }
     }
 `
+const COMMENT_FRAGMENT = `
+    fragment CommentParts on Comment{
+        id
+        text
+        user{
+            userName
+        }
+    }
+`;
 
 export default {
-    USER_FRAGMENT
+    USER_FRAGMENT,
+    COMMENT_FRAGMENT
 }

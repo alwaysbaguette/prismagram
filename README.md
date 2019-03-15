@@ -14,7 +14,8 @@ Prismagram with express with Express + Prisma + React and React Native
 - [X] Unfollow User
 - [X] Edit my profile
 - [X] See user profile
-- [] See My profile
+- [X] See My profile
+- [] See Full post
 - [] See the full photo
 - [] Upload a photo
 - [] Edit the photo (Delete)
