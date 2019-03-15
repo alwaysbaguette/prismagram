@@ -9,6 +9,8 @@ type User {
   posts:[Post!]!
   likes: [Like!]!
   comments: [Comment!]!
+  isFollowing: Boolean!
+  isSelf: Boolean!
   followers:[User!]! 
   following:[User!]! 
   rooms:[Room!]!
