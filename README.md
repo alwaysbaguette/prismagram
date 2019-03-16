@@ -19,5 +19,6 @@ Prismagram with express with Express + Prisma + React and React Native
 - [X] Upload a photo
 - [X] Edit the photo (Delete)
 - [X] See the feed
-- [] See rooms
-- [] See room
+- [X] See rooms
+- [X] See room
+- [X] Receive Message (Realtime)

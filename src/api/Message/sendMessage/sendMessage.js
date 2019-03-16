@@ -1,6 +1,6 @@
-import middlewares from "../../../middlewares";
-import { prisma } from "../../../generated/prisma-client";
-import fragments from "../../fragments";
+import middlewares from "../../../../middlewares";
+import { prisma } from "../../../../generated/prisma-client";
+import fragments from "../../../fragments";
 
 export default{
     Mutation:{
