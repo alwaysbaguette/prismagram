@@ -5,7 +5,7 @@ export default {
     Query : {
         seeFullPost : async (_,args) =>{
             const {id} = args;
-            const post = await prisma.post({id}).$fragment(fragments.FULL_POST_FRAGMENT);
+            const post = await prisma.post({id});
             return post;
         }
     }

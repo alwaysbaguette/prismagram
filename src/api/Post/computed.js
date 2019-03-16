@@ -32,6 +32,15 @@ export default{
             .count();
 
             return likeCount
+        },
+        files: async (parent) => {
+            return await prisma.post({id:parent.id}).files()
+        },
+        comments : async ( parent ) =>{
+            return await prisma.post({id:parent.id}).comments()
+        },
+        user : async ( parent ) =>{
+            return await prisma.post({id:parent.id}).user()
         }
     }
 }
