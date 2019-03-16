@@ -16,8 +16,8 @@ Prismagram with express with Express + Prisma + React and React Native
 - [X] See user profile
 - [X] See My profile
 - [X] See Full post
-- [] Upload a photo
-- [] Edit the photo (Delete)
-- [] See the feed
+- [X] Upload a photo
+- [X] Edit the photo (Delete)
+- [X] See the feed
 - [] See rooms
 - [] See room
