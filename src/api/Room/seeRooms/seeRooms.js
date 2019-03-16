@@ -1,5 +1,6 @@
 import middlewares from "../../../../middlewares";
 import { prisma } from "../../../../generated/prisma-client";
+import fragments from "../../../fragments";
 
 export default {
     Query : {
@@ -12,7 +13,7 @@ export default {
                         id:user.id
                     }
                 }
-            });
+            }).$fragment(fragments.ROOM_FRAGMENT);
         }
     }
 }

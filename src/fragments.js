@@ -1,7 +1,7 @@
 const USER_FRAGMENT=`
     id
     userName
-    email
+    avatar
 `;
 const COMMENT_FRAGMENT = `
     id
@@ -32,11 +32,25 @@ const FULL_POST_FRAGMENT = `
         }
     }
 `
+
+const MESSAGE_FRAGMENT = `
+    id
+    text
+    to{
+        ${USER_FRAGMENT}
+    }
+    from{
+        ${USER_FRAGMENT}
+    }
+`
 const ROOM_FRAGMENT = `
     fragment RoomParts on Room {
         id
         participants{
-            id
+            ${USER_FRAGMENT}
+        }
+        messages{
+            ${MESSAGE_FRAGMENT}
         }
     }
 `
@@ -45,7 +59,8 @@ export default {
     COMMENT_FRAGMENT,
     FILE_FRAGMENT,
     FULL_POST_FRAGMENT,
-    ROOM_FRAGMENT 
+    ROOM_FRAGMENT,
+    MESSAGE_FRAGMENT
 }
 
 //주의 사항 순서가 있어야함

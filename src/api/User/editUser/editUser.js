@@ -5,7 +5,7 @@ export default {
     Mutation :{
         editUser : (_,args,{request})=>{
             middlewares.isAuthenticated(request);
-            const {userName,email,firstName,lastName,bio} = args;
+            const {userName,email,firstName,lastName,bio,avatar} = args;
             const {user} =request;
             return prisma.updateUser({
                 where : {
@@ -16,7 +16,8 @@ export default {
                     email,
                     firstName,
                     lastName,
-                    bio
+                    bio,
+                    avatar
                 }
             })
         }
