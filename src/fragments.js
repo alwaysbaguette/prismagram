@@ -32,11 +32,20 @@ const FULL_POST_FRAGMENT = `
         }
     }
 `
+const ROOM_FRAGMENT = `
+    fragment RoomParts on Room {
+        id
+        participants{
+            id
+        }
+    }
+`
 export default {
     USER_FRAGMENT,
     COMMENT_FRAGMENT,
     FILE_FRAGMENT,
-    FULL_POST_FRAGMENT
+    FULL_POST_FRAGMENT,
+    ROOM_FRAGMENT 
 }
 
 //주의 사항 순서가 있어야함
